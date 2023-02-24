@@ -43,6 +43,8 @@ jobs:
         shell: bash -l {0}
         run: |
           echo "icpp --version: $(icpp --version)"
+          echo "clang++ --version: $(clang++ --version)"
+          echo "g++ --version: $(g++ --version)"
           #echo "wasm2wat version: $(wasm2wat --version)"
           echo "pip version     : $(pip --version)"
           echo "python version  : $(python --version)"
