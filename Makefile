@@ -33,6 +33,8 @@ endif
 ###########################################################################
 # latest release of didc
 VERSION_DIDC := $(shell curl --silent "https://api.github.com/repos/dfinity/candid/releases/latest" | grep -e '"tag_name"' | cut -c 16-25)
+# version to install for clang
+VERSION_CLANG := $(shell cat version_clang.txt)
 
 ###########################################################################
 # Use some clang tools that come with wasi-sdk
@@ -147,7 +149,7 @@ python-type:
 
 
 ###########################################################################
-# Toolchain installation
+# Toolchain installation for .github/workflows
 
 .PHONY: install-clang-ubuntu
 install-clang-ubuntu:
